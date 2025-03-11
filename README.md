@@ -1,6 +1,7 @@
 # **1. phantom_registration.ipynb**
 
 It calculatess the rigid transformation between CT coordinate system {CT} and Polaris Coordinate system {PO}: 
+
 **{CT} <-> {PO}** 
 and **registers the CT/Phantom in {PO}**
 
