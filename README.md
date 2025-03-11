@@ -1,29 +1,34 @@
-1. phantom_registration.ipynb
+# **1. phantom_registration.ipynb**
 
-it calculatess the rigid transformation between CT coordinate system {CT} and Polaris Coordinate system {PO}: {CT} <-> {PO}
-and registers the CT/Phantom in {PO}
+It calculatess the rigid transformation between CT coordinate system {CT} and Polaris Coordinate system {PO}: **{CT} <-> {PO}** 
 
-Prerequisites: 
-a. a probe/tool optically tracked by Polaris, ex. Medtronic Chicken Foot and its .rom file,
-b. 3D model of the CT/Phantom,
-c. Markers and their locations on CT/Phantom in {CT} (.fcsv file or equivalent), the marker locations can be marked in Slicer or Solidworks using the 3D Model of the CT/Phantom
+and **registers the CT/Phantom in {PO}**
 
-2. visualization_streaming.ipynb
+## Prerequisites: 
+a. A probe/tool optically tracked by Polaris, **ex. Medtronic Chicken Foot and its .rom file and tool tip offset**
 
-it visualizes the probe/tool and the CT/Phantom,
+b. **3D model of the CT/Phantom**
+
+c. **Markers and their locations on CT/Phantom in {CT}** (.fcsv file or equivalent), the marker locations can be marked in Slicer or Solidworks using the 3D Model of the CT/Phantom
+
+# **2. visualization_streaming.ipynb**
+
+It visualizes the probe/tool and the CT/Phantom,
 and helps validate the calculated transformation {CT} <-> {PO}
 
-Prerequisites:
-a. a probe/tool optically tracked by Polaris, ex. Metronic Chicken Foot and its .rom AND .stl files,
-b. 3D model of the CT/Phantom (.stl or .vtk files)
-c. Transformation {CT} <-> {PO} calculated by phantom_registration.ipynb
+## Prerequisites:
+a. A probe/tool optically tracked by Polaris, **ex. Metronic Chicken Foot and its .rom AND .stl files**,
 
-NOTES:
+b. **3D model of the CT/Phantom (.stl or .vtk files)**
 
-Make sure you have installed the packages:
-1. Using scikit-surgery ndi tracker to get data from Polaris
+c. **Transformation {CT} <-> {PO}** calculated by phantom_registration.ipynb
 
-2. Using VTK to visualize the tool in 3D
+# NOTES:
+
+MAKE SURE you have installed the packages:
+1. Using `scikit-surgery ndi tracker` to get data from Polaris
+
+2. Using `VTK` to visualize the tool in 3D
 
 Potential Problems:
 1. Don't know why the NDI ToolBox couldn't find the Polaris (worked well last week)
